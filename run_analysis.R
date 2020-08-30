@@ -89,5 +89,5 @@ names(data_final)<-new_names
 ###################################################################################
 # group_by activity and subject
 tidy_dataset<-aggregate(data_final[,-c(1,2)],by=list(data_final$activity,data_final$subject),FUN = mean)
-write.table(x=tidy_dataset,file = 'tidy_dataset.xlsx',row.names = FALSE)
+write.table(x=tidy_dataset,file = 'tidy_dataset.txt',row.names = FALSE)
 #xlsx::write.xlsx(x = tidy_dataset,file = 'tidy_dataset.xlsx')
